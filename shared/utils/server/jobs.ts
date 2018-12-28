@@ -62,7 +62,7 @@ async function waitJobs (serversArg: ServerInfo[] | ServerInfo) {
 
     // Retry, in case of new jobs were created
     if (pendingRequests === false) {
-      await wait(500)
+      await wait(1000)
 
       await Promise.all(tasksBuilder())
     }
